@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/searching-film.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> <!--km-->
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet"> <!--km-->
@@ -57,9 +60,33 @@
         <div class="holiday-list mt-5">
         </div>
     </div>
-
     <div class="picked"></div>
 </section>
+
+  <!--searching-film-feature-->
+<div id="searching-film">
+    <form id="searching-film-form">
+        <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+                <div class="searchbar">
+                    <input class="search_input" type="text" id="search-input-text" placeholder="Search..." required>
+                    <button type="submit" class="btn search_icon"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="alert alert-warning alert-dismissible fade show warning-message">
+        <strong>Error!</strong>
+        <div id="message-content"></div>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+
+    <div id="result"></div>
+</div>
+<!--searching-film-feature-->
+  
+  
 </main>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -71,5 +98,6 @@
 <script src="/js/holiday.js"></script>
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> <!--km-->
 <script src="/js/main.js"></script>
+<script src="./js/searching-film.js"></script>
 </body>
 </html>
