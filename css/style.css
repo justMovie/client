@@ -10,6 +10,9 @@ nav {
   color: #128c7e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+.left-nav {
+  font-family: 'Allerta Stencil', sans-serif;
+}
 .right-nav {
   margin-left: auto;
 }
