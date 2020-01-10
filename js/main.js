@@ -1,24 +1,27 @@
-$(document).ready(function() {
-  if (localStorage.getItem('token')) {
-    $('#gsignin').fadeOut()
-    $('main').fadeIn()
-  }
-  let pickedDate = ''
+$(document).ready(function () {
 
-  $('#month-picker').on('change', function() {
-    const month = Number($(this).val())
-    populateHolidays(month)
-  })
+    $(".alert-warning").hide();
 
-  $(document).on('click', '.holiday-item', function() {
-    $('.picked').empty()
+    if (localStorage.getItem('token')) {
+        $('#gsignin').fadeOut()
+        $('main').fadeIn()
+    }
+    let pickedDate = ''
 
-    pickedDate = $(this).find('.holiday-day').html()
-    pickedName = $(this).find('.holiday-name').html()
-    pickedDesc = $(this).find('.holiday-description').html()
+    $('#month-picker').on('change', function () {
+        const month = Number($(this).val())
+        populateHolidays(month)
+    })
 
-    $('.holiday-picker').fadeOut('slow', function() {
-      $('.picked').append(`
+    $(document).on('click', '.holiday-item', function () {
+        $('.picked').empty()
+
+        pickedDate = $(this).find('.holiday-day').html()
+        pickedName = $(this).find('.holiday-name').html()
+        pickedDesc = $(this).find('.holiday-description').html()
+
+        $('.holiday-picker').fadeOut('slow', function () {
+            $('.picked').append(`
         <div class="holiday-item">
             <div class="left-item">
                 <div class="holiday-day">${pickedDate}</div>
@@ -32,17 +35,37 @@ $(document).ready(function() {
             </div>
         </div>
       `)
-      $('.picked').fadeIn()
+            $('.picked').fadeIn()
+        })
     })
-  })
 
-  $(document).on('click', '#change-date', function() { 
-    $('.picked').fadeOut('slow', function() {
-      $('.holiday-picker').fadeIn('slow', function() {
-        $('.picked').hide()
-      })
+    $(document).on('click', '#change-date', function () {
+        $('.picked').fadeOut('slow', function () {
+            $('.holiday-picker').fadeIn('slow', function () {
+                $('.picked').hide()
+            })
+        })
     })
-  })
+
+    $("#form-message").on("submit", (e) => {
+        e.preventDefault();
+        const to = $("#send-to").val();
+        const message = $("#msg-body").val();
+
+        $.post("http://localhost:3000/sms", {
+                message,
+                to
+            },
+            function(data, status) {
+                $("#msg-content").append(`
+            <div class="card mt-3">
+                <div class="card-body p-1 pl-3">
+                <p class="mb-0">${data.body}</p>
+                </div>
+            </div>
+        `)
+            })
+    });
 })
 
 function onSignIn(googleUser) {
@@ -51,7 +74,7 @@ function onSignIn(googleUser) {
         id_token
     }, (response => {
         localStorage.setItem('token', response.token);
-        $('#gsignin').fadeOut('slow', function() {
+        $('#gsignin').fadeOut('slow', function () {
             $('main').fadeIn();
         });
     }));

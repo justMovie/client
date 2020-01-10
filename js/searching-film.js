@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    $(".alert-warning").hide();
-});
-
 $("#searching-film-form").submit(function (event) {
     $(".alert-warning").hide();
     $.get(`http://localhost:3000/omdbs/${$("#search-input-text").val()}`,

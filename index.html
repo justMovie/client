@@ -5,132 +5,149 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/searching-film.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/50e16953f9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css"> <!--km-->
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet"> <!--km-->
     <meta name="google-signin-scope" content="profile email"> <!--km-->
-    <meta name="google-signin-client_id" content="18224113996-i5ngf4f6dhfkus9itfnlbsmk30nc0o2e.apps.googleusercontent.com"> <!--km-->
+    <meta name="google-signin-client_id"
+          content="18224113996-i5ngf4f6dhfkus9itfnlbsmk30nc0o2e.apps.googleusercontent.com"> <!--km-->
     <title>JUST MOVIE</title>
 </head>
 <body>
-    <div id="gsignin">
-        <video autoplay muted loop id="video1">
-            <source src="./assets/THE WITCHER  FINAL TRAILER  NETFLIX.mp4" type="video/mp4">
-        </video>
-        <div class="container" id="container">
-            <h1>Just Movie</h1>
-            <h6>just start with google sign in</h6>
-            <div class="row">
-                <div class="col">
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" name="submit" id="submit" value="LOGIN">
-                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                    <a class="g-signout2" href="#" onclick="signOut();">Sign out</a>
-                </div>
+<div id="gsignin">
+    <video autoplay muted loop id="video1">
+        <source src="./assets/THE WITCHER  FINAL TRAILER  NETFLIX.mp4" type="video/mp4">
+    </video>
+    <div class="containerLogin" id="login-container">
+        <h1>Just Movie</h1>
+        <h6>just start with google sign in</h6>
+        <div class="row">
+            <div class="col">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="submit" name="submit" id="submit" value="LOGIN">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+<!--                <a class="g-signout2" href="#" onclick="signOut();">Sign out</a>-->
             </div>
         </div>
     </div>
+</div>
 <main>
-<nav>
-    <div class="left-nav">
-        JUST MOVIE
-    </div>
-    <div class="right-nav">
-        <a style="color: #128c7e;" class="g-signout2" href="#" onclick="signOut();">Sign out</a>
-    </div>
-</nav>
-<section id="holiday-wrapper" class="mt-5">
-    <div class="holiday-picker">
-        <select id="month-picker" class="btn btn-light">
-            <option value="" selected disabled>Pick A Month</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-        </select>
-        <div class="holiday-list mt-5">
+    <div id="navbar">
+        <div class="left-nav">
+            JUST MOVIE
+<!--            class="g-signout2"-->
+        </div>
+        <div class="right-nav">
+        <a style="color: #128c7e;" href="#" onclick="signOut();">Sign out</a>
         </div>
     </div>
-    <div class="picked"></div>
-</section>
+    <section id="holiday-wrapper" class="mt-5">
+        <div class="holiday-picker">
+            <select id="month-picker" class="btn btn-light">
+                <option value="" selected disabled>Pick A Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <div class="holiday-list mt-5">
+            </div>
+        </div>
+        <div class="picked"></div>
+    </section>
 
-<div class="bg-sms" style="background-color: #ecf0f1;">
-    <header>
-        <nav class="navbar navbar-light" style="background: #128c7e; padding: 2rem 1rem 10rem 1rem;">
-            <a class="navbar-brand" href="https://web.whatsapp.com/">
-            <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <span class="small pl-3 text-white font-weight-bold">WHATSAPP APP</span>
-            </a>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <div class="row justify-content-center my-3">
-            <div class="col-5 bg-white p-4 shadow-lg" style="border-radius: 8px; position: relative; top: -150px">
-                <form id="form-message">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="send-to" placeholder="To" required>
+
+    <!--searching-film-feature-->
+    <div id="searching-film">
+        <form id="searching-film-form">
+            <div class="container h-100">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="searchbar">
+                        <input class="search_input" type="text" id="search-input-text" placeholder="Search..." required>
+                        <button type="submit" class="btn search_icon"><i class="fas fa-search"></i></button>
                     </div>
-                    <div class="msg-box mb-3 p-3" id="msg-content" style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); min-height: 400px; background-position: center; background-size: cover;">
-                
-                    </div>
-                    <div class="form-group p-3" style="background: #ecf0f1">
-                        <div class="row">
-                            <div class="col-10">
-                                <textarea class="form-control" id="msg-body" rows="1" placeholder="Type a message" required style="border-radius: 1rem"></textarea>
-                            </div>
-                            <div class="col-2 text-center">
-                                <button type="submit" style="padding: 5px 10px;"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </form>
+
+        <div class="alert alert-warning alert-dismissible fade show warning-message">
+            <strong>Error!</strong>
+            <div id="message-content"></div>
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+    <!--searching-film-feature-->
+
+    <div class="bg-sms" style="background-color: #ecf0f1;">
+        <header>
+            <nav class="navbar navbar-light" style="background: #128c7e; padding: 2rem 1rem 10rem 1rem;">
+                <a class="navbar-brand" href="https://web.whatsapp.com/">
+                    <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.png" width="30" height="30"
+                         class="d-inline-block align-top" alt="">
+                    <span class="small pl-3 text-white font-weight-bold">WHATSAPP APP</span>
+                </a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row justify-content-center my-3">
+                <div class="col-5 bg-white p-4 shadow-lg" style="border-radius: 8px; position: relative; top: -150px">
+                    <form id="form-message">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="send-to" placeholder="To" required>
+                        </div>
+                        <div class="msg-box mb-3 p-3" id="msg-content"
+                             style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); min-height: 400px; background-position: center; background-size: cover;">
+
+                        </div>
+                        <div class="form-group p-3" style="background: #ecf0f1">
+                            <div class="row">
+                                <div class="col-10">
+                                    <textarea class="form-control" id="msg-body" rows="1" placeholder="Type a message"
+                                              required style="border-radius: 1rem"></textarea>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <button type="submit" style="padding: 5px 10px;"><i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>    
-</div>
-
-  <!--searching-film-feature-->
-<div id="searching-film">
-    <form id="searching-film-form">
-        <div class="container h-100">
-            <div class="d-flex justify-content-center h-100">
-                <div class="searchbar">
-                    <input class="search_input" type="text" id="search-input-text" placeholder="Search..." required>
-                    <button type="submit" class="btn search_icon"><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
-    </form>
-
-    <div class="alert alert-warning alert-dismissible fade show warning-message">
-        <strong>Error!</strong>
-        <div id="message-content"></div>
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
-
-    <div id="result"></div>
-</div>
-<!--searching-film-feature-->
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<script src="/js/holiday.js"></script>
+<script src="./js/holiday.js"></script>
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> <!--km-->
-<script src="/js/main.js"></script>
+<script src="./js/main.js"></script>
+<!--<script src="./js/sms.js"></script>-->
 <script src="./js/searching-film.js"></script>
-<script src="./js/sms.js"></script>
 </body>
 </html>
