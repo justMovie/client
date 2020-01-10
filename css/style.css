@@ -1,75 +1,86 @@
 body {
-  background-color: #128c73;
-}
-nav {
-  padding: 0 10%;
-  height: 3rem;
-  line-height: 3rem;
-  display: flex;
-  background-color: #fff;
-  color: #128c7e;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-.left-nav {
-  font-family: 'Allerta Stencil', sans-serif;
-}
-.right-nav {
-  margin-left: auto;
-}
-#holiday-wrapper {
-  width: 600px;
-  margin: auto;
-}
-.picked {
-  position: relative;
-  display: none;
-}
-#change-date {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.holiday-picker {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#month-picker {
-  width: 200px;
-  margin: auto;
-}
-.holiday-list {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  height: 100px;
-  overflow-y: auto;
-  box-shadow: inset 0px 0px 20px rgba(2, 0, 0, 0.5);
-}
-.holiday-item {
-  display: flex;
-  flex-direction: row;
-  border-radius: 4px;
-  padding: 0.4rem;
-  cursor: pointer;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
-}
-.left-item {
-  width: 80px;
-  height: 80px;
-  background-color: #f0134d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
-  color: #fff;
-  margin-right: 1rem;
-}
-=======
-    background-color: black;
-    height: 100%;
+    background-color: #128c7e;
 }
 
-.container {
-    background: rgba(242, 245, 243, 0.2);
+main {
+    /*display: none;*/
+}
+
+#navbar {
+    padding: 0 10%;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    background-color: #fff;
+    color: #128c7e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.left-nav {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.right-nav {
+    margin-left: auto;
+}
+
+#holiday-wrapper {
+    width: 600px;
+    margin: auto;
+}
+
+.picked {
+    position: relative;
+    display: none;
+}
+
+#change-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.holiday-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#month-picker {
+    width: 200px;
+    margin: auto;
+}
+
+.holiday-list {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    height: 100px;
+    overflow-y: auto;
+    box-shadow: inset 0px 0px 20px rgba(2, 0, 0, 0.5);
+}
+
+.holiday-item {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 0.4rem;
+    cursor: pointer;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
+}
+
+.left-item {
+    width: 80px;
+    height: 80px;
+    background-color: #f0134d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.containerLogin {
+    background: rgba(242, 245, 243, 0);
     height: 420px;
     width: 400px;
     top: 50%;
@@ -130,13 +141,13 @@ h6 {
 
 .g-signin2 {
     position: absolute;
-    top: calc(200px/2);
+    top: calc(200px / 2);
     left: calc(50% - 50px);
 }
 
 .g-signout2 {
     position: absolute;
-    top: calc(300px/2);
+    top: calc(300px / 2);
     left: calc(60% - 50px);
 }
 

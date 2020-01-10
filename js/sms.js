@@ -8,6 +8,7 @@ $("#form-message").on("submit", (e) => {
         to 
     },
     function(data, status) {
+        alert(data);
         $("#msg-content").append(`
             <div class="card mt-3">
                 <div class="card-body p-1 pl-3">
@@ -16,5 +17,4 @@ $("#form-message").on("submit", (e) => {
             </div>
         `)
     })
-
-})
+});
