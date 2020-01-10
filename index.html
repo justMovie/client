@@ -2,16 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/searching-film.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"> <!--km-->
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet"> <!--km-->
+    <meta name="google-signin-scope" content="profile email"> <!--km-->
+    <meta name="google-signin-client_id" content="18224113996-i5ngf4f6dhfkus9itfnlbsmk30nc0o2e.apps.googleusercontent.com"> <!--km-->
     <title>JUST MOVIE</title>
 </head>
 <body>
+    <div id="gsignin">
+        <video autoplay muted loop id="video1">
+            <source src="./assets/THE WITCHER  FINAL TRAILER  NETFLIX.mp4" type="video/mp4">
+        </video>
+        <div class="container" id="container">
+            <h1>Just Movie</h1>
+            <h6>just start with google sign in</h6>
+            <div class="row">
+                <div class="col">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" name="submit" id="submit" value="LOGIN">
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <a class="g-signout2" href="#" onclick="signOut();">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<main>
+<nav>
+    <div class="left-nav">
+        JUST MOVIE
+    </div>
+    <div class="right-nav">
+        <a style="color: #128c7e;" class="g-signout2" href="#" onclick="signOut();">Sign out</a>
+    </div>
+</nav>
+<section id="holiday-wrapper" class="mt-5">
+    <div class="holiday-picker">
+        <select id="month-picker" class="btn btn-light">
+            <option value="" selected disabled>Pick A Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <div class="holiday-list mt-5">
+        </div>
+    </div>
+    <div class="picked"></div>
+</section>
 
-<!--searching-film-feature-->
+  <!--searching-film-feature-->
 <div id="searching-film">
     <form id="searching-film-form">
         <div class="container h-100">
@@ -33,18 +85,19 @@
     <div id="result"></div>
 </div>
 <!--searching-film-feature-->
-
+  
+  
+</main>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="/js/holiday.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> <!--km-->
+<script src="/js/main.js"></script>
 <script src="./js/searching-film.js"></script>
 </body>
 </html>
