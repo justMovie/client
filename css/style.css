@@ -1,0 +1,157 @@
+body {
+    background-color: #128c7e;
+}
+
+main {
+    /*display: none;*/
+}
+
+#navbar {
+    padding: 0 10%;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    background-color: #fff;
+    color: #128c7e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.left-nav {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.right-nav {
+    margin-left: auto;
+}
+
+#holiday-wrapper {
+    width: 600px;
+    margin: auto;
+}
+
+.picked {
+    position: relative;
+    display: none;
+}
+
+#change-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.holiday-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#month-picker {
+    width: 200px;
+    margin: auto;
+}
+
+.holiday-list {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    height: 100px;
+    overflow-y: auto;
+    box-shadow: inset 0px 0px 20px rgba(2, 0, 0, 0.5);
+}
+
+.holiday-item {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    padding: 0.4rem;
+    cursor: pointer;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
+}
+
+.left-item {
+    width: 80px;
+    height: 80px;
+    background-color: #f0134d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.containerLogin {
+    background: rgba(242, 245, 243, 0);
+    height: 420px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px rgba(94, 93, 93, 0.3);
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: 'Allerta Stencil';
+    text-shadow: rgba(31, 32, 32, 1);
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: rgb(250, 248, 245);
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.col input[type=text], .col input[type=password] {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 50px;
+    opacity: 1;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.col input[type=submit] {
+    border: none;
+    outline: none;
+    background: #ff9900;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.g-signin2 {
+    position: absolute;
+    top: calc(200px / 2);
+    left: calc(50% - 50px);
+}
+
+.g-signout2 {
+    position: absolute;
+    top: calc(300px / 2);
+    left: calc(60% - 50px);
+}
+
+#video1 {
+    width: 100% !important;
+    height: 100% !important;
+}
